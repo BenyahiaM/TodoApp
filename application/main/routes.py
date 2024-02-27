@@ -38,3 +38,8 @@ def delete_all():
     todos_collection = mongo.db.todos
     todos_collection.delete_many({})
     return redirect(url_for('main.index'))
+
+@main.route('/sign_in')
+def sign_in():
+    
+    return render_template('login.html')
